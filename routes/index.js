@@ -20,7 +20,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('form', { title: 'Express' });
 });
+
+router.post('/new')
 
 module.exports = router;
