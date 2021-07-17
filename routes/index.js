@@ -20,9 +20,16 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('form', { title: 'Express' });
+  res.render('form');
 });
 
-router.post('/new')
+router.post('/new', function(req, res) {
+  messages.push({
+    text: req.body.messageText,
+    user: req.body.messageUser,
+    added: new Date()
+  });
+  res.redirect('/')
+})
 
 module.exports = router;

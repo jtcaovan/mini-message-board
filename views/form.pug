@@ -1,9 +1,11 @@
 extends layout
 
 block content
-  h1 title
-    form(method="POST" action="/new") 
-      p author's name
-      p message 
-      input(value='Submit', type='submit')
+  #messageContainer
+    a(href='/') Back
+    h1 New Message
+        form(method="POST" action="/new").form
+          input(type='text' name='messageUser' placeholder='Name')
+          input(type='text' name='messageText' placeholder='Type message...')
+          input(value='Submit' type='submit')
   

@@ -1,8 +1,12 @@
 extends layout
 
 block content
-  h1= title
-    each message in messages
-      p= message.text
-      p= message.user 
-      p= message.added 
+  .content 
+    h1= title
+    h2 Welcome back!
+    a(href='/new') New Message
+    .messageContainer
+      each message in messages
+        p= message.text
+        p= message.user 
+        p= message.added 

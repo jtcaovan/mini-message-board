@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+  color: #1DA1F2;
+  font-size: 2rem
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageContainer {
+  border-style: solid;
+  border: black;
+}
